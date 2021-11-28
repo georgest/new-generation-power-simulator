@@ -1,0 +1,47 @@
+
+
+
+.block {
+  display: flex;
+  position: relative;
+}
+
+.block_name {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.block.horizontal {
+  flex-direction: column;
+}
+
+.block.vertical {
+  flex-direction: vertical;
+}
+
+.modal, .modal2 {
+  position: absolute;
+  background: #FDFFFC;
+  color: #011627;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400;
+}
+
+.modal2 {
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 75%;
+}

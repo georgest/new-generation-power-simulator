@@ -1,0 +1,92 @@
+
+
+
+.floor {
+  position: relative;
+  border: 1px solid rgba(253, 255, 252, 0.3);
+  padding: 15px 5px;
+  border-radius: 4px;
+}
+
+.floor.vertical {
+  width: 60px;
+  height: 200px;
+}
+
+.floor.horizontal {
+  width: 360px;
+  height: 80px;
+}
+
+.floor_number {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 0;
+  text-align: center;
+  font-size: 11px;
+  width: 40px;
+  background: #FDFFFC;
+  color: #011627;
+  border-radius: 1px;
+}
+
+.floor_content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.floor_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical .floor_content .floor_row {
+  flex-direction: row;
+}
+
+.horizontal .floor_content .floor_row {
+  flex-direction: column;
+}
+
+.apartment {
+  border: 1px solid #FDFFFC;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.apartment.invisible {
+  opacity: 0 !important;
+}
+
+.apartment.unactive {
+  opacity: 0.25;
+  background: transparent !important;
+}
+
+.apartment.active {
+  opacity: 1;
+}
+
+.apartment.low    { background: #6a994e; border-color: #6a994e }
+.apartment.medium { background: #ffa62b; border-color: #ffa62b }
+.apartment.high   { background: #d90429; border-color: #d90429 }
+
+.popover {
+  padding: 5px;
+  font-size: 12px;
+}
+
+.popover p {
+  margin: 0;
+  margin-top: 3px;
+}
+
+.popover p:first-child {
+  margin-top: 0;
+}
