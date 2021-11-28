@@ -62,7 +62,7 @@ const Usage = ({ open, handleClose }) => {
             <FormControlLabel control={<Checkbox />} label="Климатик" />
           </FormGroup>
           <FormGroup>
-            <FormControlLabel control={<Checkbox />} label="Климатик" />
+            <FormControlLabel control={<Checkbox />} label="Печка" />
           </FormGroup>
         </Box>
         <Box sx={{ mt: 2 }}>

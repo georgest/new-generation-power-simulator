@@ -14,6 +14,8 @@ import { useUser } from '../auth/useUser';
 import styles from '../styles/Home.module.css';
 
 const Home = ({ status = 'low' }) => {
+  const [info, setInfo] = useState(null);
+
   const { user, logout } = useUser();
 
   const [open, setOpen] = useState(false);
@@ -54,7 +56,8 @@ const Home = ({ status = 'low' }) => {
       <Box className={styles.block_c}>
         <BlockC />
       </Box>
-      <Usage open={open} handleClose={handleClose} />
+      { !info && <Questionaire open={open} handleClose={handleClose} onSuccess={ (block, app) => setInfo({ block, app }) } /> }
+      { info && info.block && info.app && <Usage open={open} handleClose={handleClose} /> }
     </Box>
   );
 };

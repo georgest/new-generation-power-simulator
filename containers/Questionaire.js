@@ -19,13 +19,12 @@ const getAppartmentsCount = (block) => {
   }
 }
 
-const Questionaire = ({ open, handleClose }) => {
+const Questionaire = ({ open, handleClose, onSuccess }) => {
   const [block, setBlock] = useState(null);
   const [app, setApp] = useState(null);
 
   const handleSave = () => {
-    console.log(block);
-    console.log(app);
+    onSuccess && onSuccess(block, app);
   };
 
   const onBlockChange = useCallback((block) => {
