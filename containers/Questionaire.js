@@ -4,6 +4,9 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
 import styles from '../styles/containers.module.css';
 
 const getAppartmentsCount = (block) => {
@@ -19,12 +22,23 @@ const getAppartmentsCount = (block) => {
   }
 }
 
-const Questionaire = ({ open, handleClose, onSuccess }) => {
+const Questionaire = ({ user, open, handleClose }) => {
   const [block, setBlock] = useState(null);
   const [app, setApp] = useState(null);
 
   const handleSave = () => {
-    onSuccess && onSuccess(block, app);
+    try {
+      firebase
+        .firestore()
+        .collection('users')
+        .doc(user.id)
+        .set({
+          block,
+          app,
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const onBlockChange = useCallback((block) => {

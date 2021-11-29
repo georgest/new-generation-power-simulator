@@ -1,0 +1,31 @@
+export const usageLabelsMappings = {
+  ac: 'Климатик',
+  warmer: 'Духалка',
+  convector: 'Конвектор',
+  tv: 'Телевизор',
+  lamps: 'Лампи',
+  refrigerator: 'Хладилник',
+  cooker: 'Печка',
+  plot: 'Котлони',
+  aspirator: 'Аспиратор',
+  dishWasher: 'Съдомиялна',
+  washingMachine: 'Пералня',
+  dryer: 'Сушилня',
+  boiler: 'Бойлер',
+};
+
+export const usageMappings = {
+  ac: 1.5,
+  warmer: 2,
+  convector: 3,
+  tv: 0.25,
+  lamps: 0.05,
+  refrigerator: 0.7,
+  cooker: 2.2,
+  plot: 2.1,
+  aspirator: 1.4,
+  dishWasher: 1.5,
+  washingMachine: 1.15,
+  dryer: 5.4,
+  boiler: 4,
+};

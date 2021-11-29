@@ -30,6 +30,15 @@
 .status.medium { background: #ffa62b }
 .status.high { background: #d90429 }
 
+.status .totals {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  top: 100%;
+  padding: 10px 0;
+}
+
 .block_a, .block_b, .block_c {
   position: absolute;
 }

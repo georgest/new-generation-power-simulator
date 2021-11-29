@@ -1,6 +1,7 @@
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore';
 import initFirebase from '../config';
 import { setUserCookie } from '../auth/userCookie';
 import { mapUserData } from '../auth/useUser';
@@ -20,7 +21,9 @@ const firebaseAuthConfig = ({ signInSuccessUrl }) => ({
   signInSuccessUrl,
   credentialHelper: 'none',
   callbacks: {
-    signInSuccessWithAuthResult: async ({ user }, redirectUrl) => {
+    signInSuccessWithAuthResult: async (authResult, redirectUrl) => {
+      const { user } = authResult;
+
       const userData = await mapUserData(user);
       setUserCookie(userData);
     }
