@@ -101,6 +101,7 @@ const Home = () => {
         .firestore()
         .collection('users')
         .onSnapshot((doc) => {
+          setItems([]);
           doc.forEach((d) => {
             const { app, block } = d.data();
             let duplicate = false;
